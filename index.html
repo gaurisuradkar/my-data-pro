@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Gauri Suradkar — B.Tech student interested in Data Science and Artificial Intelligence." />
+  <title>Gauri Suradkar | Portfolio</title>
+  <style>
+    :root { --bg:#0d0d0d; --panel:#151515; --text:#f4f4f4; --muted:#a6a6a6; --line:#303030; --accent:#d8d8d8; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--text); font-family:Inter,Arial,sans-serif; line-height:1.65; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1060px,90%); margin:auto; }
+    header { position:sticky; top:0; z-index:5; background:rgba(13,13,13,.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+    nav { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.08em; font-size:.95rem; }
+    .navlinks { display:flex; gap:22px; flex-wrap:wrap; color:var(--muted); font-size:.88rem; }
+    .navlinks a:hover, .textlink:hover { color:white; }
+    .hero { padding:105px 0 90px; display:grid; grid-template-columns:1.5fr .8fr; gap:50px; align-items:center; }
+    .eyebrow { color:var(--muted); text-transform:uppercase; letter-spacing:.18em; font-size:.75rem; margin-bottom:18px; }
+    h1 { font-size:clamp(2.8rem,7vw,5.5rem); line-height:1.02; letter-spacing:-.055em; margin-bottom:20px; }
+    .hero p { color:#c4c4c4; max-width:620px; font-size:1.05rem; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+    .btn { border:1px solid #eee; padding:11px 18px; font-size:.88rem; font-weight:700; display:inline-block; transition:.2s; }
+    .btn.primary { background:#f2f2f2; color:#111; }
+    .btn:hover { transform:translateY(-2px); }
+    .hero-card { border:1px solid var(--line); background:linear-gradient(145deg,#1c1c1c,#101010); padding:28px; min-height:250px; display:flex; flex-direction:column; justify-content:space-between; }
+    .monogram { font-size:5rem; font-weight:800; letter-spacing:-.1em; line-height:1; }
+    .hero-card small { color:var(--muted); letter-spacing:.12em; text-transform:uppercase; }
+    section { padding:68px 0; border-top:1px solid var(--line); }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:28px; }
+    h2 { font-size:1.8rem; letter-spacing:-.035em; }
+    .section-head p { color:var(--muted); font-size:.9rem; }
+    .about { display:grid; grid-template-columns:1.3fr 1fr; gap:45px; }
+    .about p { color:#c3c3c3; }
+    .facts { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .fact, .card, .skillbox { background:var(--panel); border:1px solid var(--line); padding:20px; }
+    .fact span { display:block; color:var(--muted); font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; }
+    .fact strong { display:block; margin-top:5px; font-size:.95rem; }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; }
+    .card { display:flex; flex-direction:column; min-height:210px; }
+    .card .num { color:#777; font-size:.75rem; letter-spacing:.12em; }
+    .card h3 { margin:10px 0 8px; font-size:1.12rem; }
+    .card p { color:#bcbcbc; font-size:.9rem; }
+    .tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; padding-top:20px; }
+    .tag { border:1px solid #3b3b3b; color:#c5c5c5; padding:4px 8px; font-size:.72rem; }
+    .skills { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .skillbox h3 { font-size:.95rem; margin-bottom:10px; }
+    .skillbox p { color:#bcbcbc; font-size:.88rem; }
+    .timeline { border-left:1px solid #555; padding-left:22px; display:grid; gap:22px; }
+    .timeline-item h3 { font-size:1rem; }
+    .timeline-item p { color:var(--muted); font-size:.9rem; }
+    .contact { display:flex; justify-content:space-between; align-items:center; gap:30px; flex-wrap:wrap; }
+    .contact p { color:var(--muted); max-width:500px; }
+    footer { padding:25px 0; color:#777; font-size:.8rem; border-top:1px solid var(--line); }
+    .note { color:#8f8f8f; font-size:.78rem; margin-top:15px; }
+    @media(max-width:760px) {
+      .navlinks { gap:12px; font-size:.78rem; }
+      .hero, .about { grid-template-columns:1fr; }
+      .hero { padding:75px 0 60px; gap:28px; }
+      .hero-card { min-height:170px; }
+      .grid, .skills { grid-template-columns:1fr; }
+      .section-head { display:block; }
+      .section-head p { margin-top:6px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#home">GAURI SURADKAR</a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero" id="home" style="border:0">
+      <div>
+        <div class="eyebrow">Student portfolio · Data Science & AI</div>
+        <h1>Gauri<br/>Suradkar<span style="color:#777">.</span></h1>
+        <p>B.Tech student exploring Data Science, Artificial Intelligence and software development. I enjoy turning ideas into practical projects and learning by building.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my work</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <small>Curiosity → Learning → Building</small>
+        <div class="monogram">GS.</div>
+        <small>Based in India</small>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-head"><h2>About me</h2><p>A little introduction</p></div>
+      <div class="about">
+        <p>I am a B.Tech student with an interest in data-driven problem solving and AI-powered applications. My learning journey includes Python, SQL, data analytics, machine learning concepts and full-stack project development. I am currently focused on strengthening my technical foundation and building projects that solve real-world problems.</p>
+        <div class="facts">
+          <div class="fact"><span>Focus</span><strong>Data Science & AI</strong></div>
+          <div class="fact"><span>Learning</span><strong>Python · SQL · ML</strong></div>
+          <div class="fact"><span>Approach</span><strong>Hands-on projects</strong></div>
+          <div class="fact"><span>Location</span><strong>India</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-head"><h2>Technical skills</h2><p>Tools and technologies I work with / am learning</p></div>
+      <div class="skills">
+        <div class="skillbox"><h3>Programming & Data</h3><p>Python · SQL · Java · Pandas · NumPy</p></div>
+        <div class="skillbox"><h3>AI & Machine Learning</h3><p>Machine Learning fundamentals · NLP concepts · RAG concepts · Scikit-learn</p></div>
+        <div class="skillbox"><h3>Analytics & Development</h3><p>Power BI · Matplotlib · React · FastAPI · MongoDB · Git/GitHub</p></div>
+      </div>
+      <p class="note">Please edit this list to reflect only tools you can confidently discuss in an interview.</p>
+    </section>
+
+    <section id="projects">
+      <div class="section-head"><h2>Selected projects</h2><p>Practical work and learning projects</p></div>
+      <div class="grid">
+        <article class="card">
+          <div class="num">01 / FINAL-YEAR PROJECT</div>
+          <h3>AI-Powered Real-Time Urban Intelligence & Infrastructure Analytics</h3>
+          <p>A platform concept for reporting and analysing civic infrastructure issues using image and text-based issue classification, severity assessment, complaint tracking and analytics dashboards.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">MongoDB</span><span class="tag">ML</span></div>
+        </article>
+        <article class="card">
+          <div class="num">02 / AI PROJECT</div>
+          <h3>Retrieval-Augmented Generation (RAG) Portfolio Project</h3>
+          <p>A project exploring how a retrieval pipeline can ground language-model responses in a selected knowledge source. Add the exact dataset, framework, evaluation and repository details before publishing.</p>
+          <div class="tags"><span class="tag">RAG</span><span class="tag">LLMs</span><span class="tag">Python</span></div>
+        </article>
+        <article class="card">
+          <div class="num">03 / DATA ANALYTICS</div>
+          <h3>E-commerce Sales Analysis Dashboard</h3>
+          <p>An analytics project focused on cleaning sales data and presenting product, revenue and business trends through an interactive Power BI dashboard.</p>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">SQL</span><span class="tag">Data Cleaning</span></div>
+        </article>
+        <article class="card">
+          <div class="num">04 / DATA ANALYSIS</div>
+          <h3>Data Analysis Practice Projects</h3>
+          <p>Exploratory analysis and visualisation exercises using Python libraries. Add a specific project title, dataset, findings and GitHub link when ready.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span></div>
+        </article>
+      </div>
+      <p class="note">Project descriptions are starter summaries based on the information provided so far. Add repository links, screenshots and verified implementation details before using this as a final job-application portfolio.</p>
+    </section>
+
+    <section id="education">
+      <div class="section-head"><h2>Education & learning</h2><p>Academic background</p></div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Bachelor of Technology (B.Tech)</h3>
+          <p>Computer / Technology discipline · [College / University name] · [Expected graduation year]</p>
+          <p>CGPA: [Add latest CGPA if you want it displayed]</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Certifications & virtual experience</h3>
+          <p>AWS Academy Generative AI virtual internship and other relevant learning experiences.</p>
+          <p class="note">Add exact certificate titles, issuing organisations and completion dates.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h2>Let's connect.</h2>
+          <p>For internship opportunities, project discussions or collaboration, feel free to reach out.</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Email me</a>
+          <a class="btn" href="https://github.com/gaurisuradkar" target="_blank" rel="noreferrer">GitHub profile</a>
+          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <p class="note">Before publishing: replace the email placeholder, add your LinkedIn profile URL, college details and verified project links.</p>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap">© 2026 Gauri Suradkar · Built with HTML & CSS</div></footer>
+</body>
+</html>
